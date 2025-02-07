@@ -34,7 +34,7 @@ Follow these steps to install the project:
 
 2. Change API Key to yours if you want
    ```bash
-    File to change, in root folder: .env.dev:
+    File to change, in backend folder: .env.dev:
     Line to change: CURRENCY_API_KEY=
    
 3. Build and start containers with Docker Compose
