@@ -14,15 +14,14 @@
 An Exchange Rate App powered by the anyapi.io API. 
 The project is built with Docker and consists of two parts: a Symfony PHP backend and a ReactJS frontend. For enhanced performance, RabbitMQ and Redis are used for backend optimization.
 
-By default, sample data for currency pairs such as EUR -> GBP, EUR -> USD, EUR -> AUD, and their reverse pairs are preloaded.  
-Additional currency pairs can be added directly from the symfony-php-container. Please refer to the instructions below for guidance.
+**By default, sample data for currency pairs such as EUR -> GBP, EUR -> USD, EUR -> AUD, and their reverse pairs are preloaded.  
+Additional currency pairs can be added directly from the symfony-php-container. Please refer to the instructions below for guidance.**
 
 Project structure:
 - backend (Symfony PHP)
 - frontend (React)
   - docker (react)
 - docker (mysql, nginx, php-fpm)
-- 
 ---
 
 ## Installation
@@ -58,7 +57,10 @@ Follow these steps to install the project:
 3. Show Currency rate pair (Sync)
    ```bash
    php bin/console app:show-pair "GBP EUR" 
-4. Run&Watch Currency rate pairs (Sync)
+4. Update the exchange rate for selected currencies (Sync)  
+   **Note:** If you have added a new currency pair, you will need to run this command twice.
+   - The first execution will add the new currency pair to the staging table.
+   - The second execution will create records in the History table.  
    ```bash
    php bin/console app:watch-pair
 
