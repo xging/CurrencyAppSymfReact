@@ -86,6 +86,9 @@ Follow these steps to install the project:
 4. Find history records by selected currencies, date (YYYY-MM-DD), and time (HH:MM:SS):
    ```bash
    http://localhost:8080/get-currency-hist/GBP/EUR/2025-01-17/10:35:05
+5. Find All history records:
+   ```bash
+   http://localhost:8080/get-currency-hist-all
 
 ## Usage with React JS
   ```bash
